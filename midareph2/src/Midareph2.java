@@ -39,6 +39,7 @@ public class Midareph2 {
         }
         float c = (float) (a + b) / 2;
         System.out.println("Среднее арифметическое двух чисел равно:");
+        System.out.print("# ");
         System.out.println(c);
 
     }
