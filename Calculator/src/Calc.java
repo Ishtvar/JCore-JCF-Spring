@@ -56,6 +56,9 @@ public class Calc {
                     System.out.print("Ответ: " + (a * b));
                     break;
                 case '/':
+                    if (b == 0)
+                        System.out.print("На ноль делить нельзя!");
+                    else
                     System.out.print("Ответ: " + (a / b));
                     break;
                 default:
