@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import OwnLib.Java.OwnLib;
+
 public class Midareph2 {
 
     public static void main(String[] args) {
@@ -9,34 +11,13 @@ public class Midareph2 {
         int a;
         System.out.println("Введите первое число");
         System.out.print("# ");
-        if (scanner.hasNextInt()) {
-            a = scanner.nextInt();
-        } else {
-            do {
-                System.out.println("Вы ввели не верное число");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextInt());
-            a = scanner.nextInt();
-        }
+        a = OwnLib.IntInput();
 
         int b;
         System.out.println("Введите второе число");
         System.out.print("# ");
-        if (scanner.hasNextInt()) {
-            b = scanner.nextInt();
-        } else {
-            do {
-                System.out.println("Вы ввели не верное число");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextInt());
-            b = scanner.nextInt();
-        }
+        b = OwnLib.IntInput();
+
         float c = (float) (a + b) / 2;
         System.out.println("Среднее арифметическое двух чисел равно:");
         System.out.print("# ");

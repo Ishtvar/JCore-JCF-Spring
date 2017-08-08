@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import OwnLib.Java.OwnLib;
+
 public class Deposit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -7,49 +9,18 @@ public class Deposit {
 
         float sum;
         System.out.println("Введите сумму вклада грн,коп");
-        System.out.print("# ");
-        if (scanner.hasNextFloat()) {
-            sum = scanner.nextFloat();
-        } else {
-            do {
-                System.out.println("Вы ввели не верную сумму");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextFloat());
-            sum = scanner.nextFloat();
-        }
+        sum = OwnLib.FloatInput();
+
         float percent;
         System.out.println("Введите процент годовых");
         System.out.print("# ");
-        if (scanner.hasNextFloat()) {
-            percent = scanner.nextFloat();
-        } else {
-            do {
-                System.out.println("Вы ввели не верный процент");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextFloat());
-            percent = scanner.nextFloat();
-        }
+        percent = OwnLib.FloatInput();
+
         int term;
         System.out.println("Введите срок вклада (лет)");
         System.out.print("# ");
-        if (scanner.hasNextInt()) {
-            term = scanner.nextInt();
-        } else {
-            do {
-                System.out.println("Вы ввели не верный срок");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextInt());
-            term = scanner.nextInt();
-        }
+        term = OwnLib.IntInput();
+
         float AccruPerc;
         for (int i = 1; i <= term; i++) {
             AccruPerc = sum / 100 * percent;

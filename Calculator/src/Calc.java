@@ -1,48 +1,26 @@
-import java.util.Scanner;
+import OwnLib.Java.OwnLib;
 
-import static java.lang.Math.pow;
+import java.util.Scanner;
 
 public class Calc {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         String input = new String();
 
         int a;
         System.out.println("Введите первое число");
         System.out.print("# ");
-        if (scanner.hasNextInt()) {
-            a = scanner.nextInt();
-        } else {
-            do {
-                System.out.println("Вы ввели не верное число");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextInt());
-            a = scanner.nextInt();
-        }
+        a = OwnLib.IntInput();
 
         int b;
         System.out.println("Введите второе число");
         System.out.print("# ");
-        if (scanner.hasNextInt()) {
-            b = scanner.nextInt();
-        } else {
-            do {
-                System.out.println("Вы ввели не верное число");
-                System.out.println("повторите ввод");
-                System.out.print("# ");
-                input = scanner.next();
-            }
-            while (!scanner.hasNextInt());
-            b = scanner.nextInt();
-        }
-
-        System.out.println("Введите тип операции");
-        System.out.print("# ");
+        b = OwnLib.IntInput();
 
         char oper;
+        System.out.println("Введите тип операции");
+        System.out.print("# ");
         do {
             oper = scanner.next().charAt(0);
             switch (oper) {
@@ -59,7 +37,7 @@ public class Calc {
                     if (b == 0)
                         System.out.print("На ноль делить нельзя!");
                     else
-                    System.out.print("Ответ: " + (a / b));
+                        System.out.print("Ответ: " + (a / b));
                     break;
                 default:
                     System.out.println("Вы ввели недопустимый тип опрерации");
@@ -73,4 +51,4 @@ public class Calc {
         while (oper == 'x');
     }
 
-    }
+}
