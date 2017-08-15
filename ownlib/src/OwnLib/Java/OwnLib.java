@@ -43,6 +43,17 @@ public class OwnLib {
         return (rightInput);
     }
 
+    public static void ractangle(char[][] fig1, int height, int width) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                if (i == 0 || i == height - 1 || j == 0 || j == width - 1)
+                    fig1[i][j] = '*';
+                else
+                    fig1[i][j] = ' ';
+            }
+        }
+    }
+
     public static void twoDimArrayOutput(char[][] arr, int h, int w) {
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {
