@@ -82,4 +82,20 @@ public class OwnLib {
             System.out.println();
         }
     }
+    public static void twoDimArrayOutput(int[][] arr, int h, int w) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void columnSwap(int[][] arr, int a, int b){
+        for (int i = 0; i < arr.length; i++) {
+            int s = arr[i][a];
+            arr[i][a] = arr[i][b];
+            arr[i][b] = s;
+        }
+    }
 }
