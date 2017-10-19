@@ -19,7 +19,8 @@ public class primeNumber {
                     }
                 }
             }
+        } else {
+            System.out.println("Это число совсем не простое");
         }
-        System.out.println("Это число совсем не простое");
     }
 }

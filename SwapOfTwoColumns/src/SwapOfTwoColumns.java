@@ -13,6 +13,7 @@ public class SwapOfTwoColumns {
         }
         OwnLib.twoDimArrayOutput(arr, 4, 4);
         OwnLib.columnSwap(arr, 1, 2);
+        System.out.println();
         OwnLib.twoDimArrayOutput(arr, 4, 4);
     }
 }
