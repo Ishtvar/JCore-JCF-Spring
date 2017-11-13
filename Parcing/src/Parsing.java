@@ -2,7 +2,7 @@ import OwnLib.Java.OwnLib;
 
 import java.util.Scanner;
 
-public class parcing {
+public class Parsing {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choise;

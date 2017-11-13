@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import OwnLib.Java.OwnLib;
 
-public class midarephmany {
+public class AverageMany {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = new String();
