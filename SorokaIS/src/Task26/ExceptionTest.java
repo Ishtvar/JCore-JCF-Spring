@@ -6,6 +6,7 @@ public class ExceptionTest {
         int i = 3;
         int j = 0;
         String k = "gdft";
+
         try {
             divOf(i, j);
         } catch (CustomValidationArguments e) {
